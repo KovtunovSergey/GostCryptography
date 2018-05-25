@@ -35,7 +35,11 @@ namespace GostCryptography.Native
                     {
                         if (!_providerHandles.ContainsKey(providerType))
                         {
+                            //add: sk
                             var providerParams = new CspParameters(providerType);
+                            providerParams.ProviderType = ProviderTypes.CryptoPro;
+                            providerParams.ProviderName = "Crypto-Pro GOST R 34.10-2001 Cryptographic Service Provider";
+                            //end: sk
                             var providerHandle = AcquireProvider(providerParams);
 
                             Thread.MemoryBarrier();
@@ -65,7 +69,11 @@ namespace GostCryptography.Native
                     {
                         if (!_randomNumberGenerators.ContainsKey(providerType))
                         {
+                            //add: sk
                             var providerParams = new CspParameters(GostCryptoConfig.ProviderType);
+                            providerParams.ProviderType = ProviderTypes.CryptoPro;
+                            providerParams.ProviderName = "Crypto-Pro GOST R 34.10-2001 Cryptographic Service Provider";
+                            //end: sk
                             var randomNumberGenerator = new RNGCryptoServiceProvider(providerParams);
 
                             Thread.MemoryBarrier();
@@ -786,13 +794,13 @@ namespace GostCryptography.Native
             return exportedKeyBytes;
         }
 
-        public static GostKeyExchangeParameters ExportPublicKey(SafeKeyHandleImpl symKeyHandle)
+        public static Asn1.Common.GostKeyExchangeParameters ExportPublicKey(SafeKeyHandleImpl symKeyHandle)
         {
             var exportedKeyBytes = ExportCspBlob(symKeyHandle, SafeKeyHandleImpl.InvalidHandle, Constants.PUBLICKEYBLOB);
             return DecodePublicBlob(exportedKeyBytes);
         }
 
-        private static GostKeyExchangeParameters DecodePublicBlob(byte[] encodedPublicBlob)
+        private static Asn1.Common.GostKeyExchangeParameters DecodePublicBlob(byte[] encodedPublicBlob)
         {
             if (encodedPublicBlob == null)
             {
@@ -818,7 +826,7 @@ namespace GostCryptography.Native
                 throw ExceptionUtility.CryptographicException(Constants.NTE_BAD_DATA);
             }
 
-            var publicKeyParameters = new GostKeyExchangeParameters();
+            var publicKeyParameters = new Asn1.Common.GostKeyExchangeParameters();
 
             var encodeKeyParameters = new byte[(encodedPublicBlob.Length - 16) - 64];
             Array.Copy(encodedPublicBlob, 16, encodeKeyParameters, 0, (encodedPublicBlob.Length - 16) - 64);
@@ -910,7 +918,7 @@ namespace GostCryptography.Native
             return keyNumber;
         }
 
-        public static SafeKeyHandleImpl ImportPublicKey(SafeProvHandleImpl providerHandle, GostKeyExchangeParameters publicKeyParameters)
+        public static SafeKeyHandleImpl ImportPublicKey(SafeProvHandleImpl providerHandle, Asn1.Common.GostKeyExchangeParameters publicKeyParameters)
         {
             if (publicKeyParameters == null)
             {
@@ -925,7 +933,7 @@ namespace GostCryptography.Native
             return hKeyExchange;
         }
 
-        public static byte[] EncodePublicBlob(GostKeyExchangeParameters publicKeyParameters)
+        public static byte[] EncodePublicBlob(Asn1.Common.GostKeyExchangeParameters publicKeyParameters)
         {
             if (publicKeyParameters == null)
             {
@@ -1060,7 +1068,7 @@ namespace GostCryptography.Native
             return importedKeyBytes;
         }
 
-        public static SafeKeyHandleImpl ImportAndMakeKeyExchange(SafeProvHandleImpl providerHandle, GostKeyExchangeParameters keyExchangeParameters, SafeKeyHandleImpl publicKeyHandle)
+        public static SafeKeyHandleImpl ImportAndMakeKeyExchange(SafeProvHandleImpl providerHandle, Asn1.Common.GostKeyExchangeParameters keyExchangeParameters, SafeKeyHandleImpl publicKeyHandle)
         {
             if (keyExchangeParameters == null)
             {

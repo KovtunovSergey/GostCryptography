@@ -1,9 +1,9 @@
-﻿using System.Security.Cryptography.Pkcs;
+﻿using System;
+using System.IO;
+using System.Security.Cryptography.Pkcs;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-
 using GostCryptography.Pkcs;
-
 using NUnit.Framework;
 
 namespace GostCryptography.Tests.Pkcs
@@ -23,15 +23,19 @@ namespace GostCryptography.Tests.Pkcs
 		{
 			// Given
 			var certificate = TestCertificates.GetCertificate();
-			var message = CreateMessage();
-
+            Assert.IsNotNull(certificate);
+            Assert.AreEqual(certificate.SignatureAlgorithm.Value, "1.2.643.2.2.3"); 
+            var message = CreateMessage();
+            
 			// When
 			var signedMessage = SignMessage(certificate, message);
+            var bFile = Convert.ToBase64String(signedMessage);
+            File.WriteAllBytes("test.txt", signedMessage);
 			var isValudSignedMessage = VerifyMessage(signedMessage);
 
 			// Then
 			Assert.IsTrue(isValudSignedMessage);
-		}
+        }
 
 		private static byte[] CreateMessage()
 		{
@@ -71,8 +75,9 @@ namespace GostCryptography.Tests.Pkcs
 				// Проверка подписи сообщения CMS/PKCS#7
 				signedCms.CheckSignature(true);
 			}
-			catch
-			{
+			catch (System.Exception ex)
+            {
+                var x = ex;
 				return false;
 			}
 

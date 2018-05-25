@@ -15,13 +15,13 @@ namespace GostCryptography.Tests
 		/// </remarks>
 		public const StoreName CertStoreName = StoreName.My;
 
-		/// <summary>
-		/// Местоположение для поиска тестового сертификата.
-		/// </summary>
-		/// <remarks>
-		/// Значение равно <see cref="StoreLocation.LocalMachine"/>.
-		/// </remarks>
-		public const StoreLocation CertStoreLocation = StoreLocation.LocalMachine;
+        /// <summary>
+        /// Местоположение для поиска тестового сертификата.
+        /// </summary>
+        /// <remarks>
+        /// Значение равно <see cref="StoreLocation.LocalMachine"/>.
+        /// </remarks>
+        public const StoreLocation CertStoreLocation = StoreLocation.CurrentUser;//.LocalMachine;
 
 		/// <summary>
 		/// Сертификат ГОСТ Р 34.10-2001 с закрытым ключем.
@@ -41,7 +41,8 @@ namespace GostCryptography.Tests
 		/// </remarks>
 		public static CspParameters GetKeyContainer()
 		{
-			return GostCetificate.GetPrivateKeyInfo();
+            var keyContainer2 = new CspParameters(ProviderTypes.CryptoPro, null, "MyCryptoProContainer");
+            return GostCetificate.GetPrivateKeyInfo();
 		}
 
 		/// <summary>
@@ -55,18 +56,28 @@ namespace GostCryptography.Tests
 
 		private static X509Certificate2 FindGostCertificate()
 		{
-			// Для тестирования берется первый найденный сертификат ГОСТ с закрытым ключем.
-
-			var store = new X509Store(CertStoreName, CertStoreLocation);
+            // Для тестирования берется первый найденный сертификат ГОСТ с закрытым ключем.
+            /*
+            var cert = new X509Certificate2("Gost2001.pfx", "123");
+            if (cert.HasPrivateKey && cert.SignatureAlgorithm.Value == "1.2.643.2.2.3") // old value 1.2.643.7.1.1.3.2 
+            {
+                return cert;
+            }
+            */
+            
+            var store = new X509Store(CertStoreName, CertStoreLocation);
 			store.Open(OpenFlags.ReadOnly);
-
+            int i = 0;
 			try
 			{
-				foreach (var certificate in store.Certificates)
-				{
-					if (certificate.HasPrivateKey && certificate.SignatureAlgorithm.Value == "1.2.643.2.2.3")
+                foreach (var certificate in store.Certificates)
+                {
+                    if (certificate.HasPrivateKey && certificate.SignatureAlgorithm.Value == "1.2.643.2.2.3")
 					{
+                       //var temp = certificate.PrivateKey;
+                      // if (i==1)
 						return certificate;
+                       // i++;
 					}
 				}
 			}
@@ -74,7 +85,7 @@ namespace GostCryptography.Tests
 			{
 				store.Close();
 			}
-
+            
 			return null;
 		}
 	}

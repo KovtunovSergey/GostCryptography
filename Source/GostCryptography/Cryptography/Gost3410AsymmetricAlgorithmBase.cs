@@ -57,20 +57,20 @@ namespace GostCryptography.Cryptography
 		/// Создает общий секретный ключ.
 		/// </summary>
 		/// <param name="keyParameters">Параметры открытого ключа, используемого для создания общего секретного ключа.</param>
-		public abstract GostKeyExchangeAlgorithmBase CreateKeyExchange(GostKeyExchangeParameters keyParameters);
+		public abstract GostKeyExchangeAlgorithmBase CreateKeyExchange(Asn1.Common.GostKeyExchangeParameters keyParameters);
 
 
 		/// <summary>
 		/// Экспортирует (шифрует) параметры ключа, используемого для создания общего секретного ключа.
 		/// </summary>
 		/// <param name="includePrivateKey">Включить секретный ключ.</param>
-		public abstract GostKeyExchangeParameters ExportParameters(bool includePrivateKey);
+		public abstract Asn1.Common.GostKeyExchangeParameters ExportParameters(bool includePrivateKey);
 
 		/// <summary>
 		/// Импортирует (дешифрует) параметры ключа, используемого для создания общего секретного ключа.
 		/// </summary>
 		/// <param name="keyParameters">Параметры ключа, используемого для создания общего секретного ключа.</param>
-		public abstract void ImportParameters(GostKeyExchangeParameters keyParameters);
+		public abstract void ImportParameters(Asn1.Common.GostKeyExchangeParameters keyParameters);
 
 
 		/// <summary>
@@ -102,7 +102,7 @@ namespace GostCryptography.Cryptography
 		}
 
 
-		private static string KeyParametersToXml(GostKeyExchangeParameters parameters)
+		private static string KeyParametersToXml(Asn1.Common.GostKeyExchangeParameters parameters)
 		{
 			var builder = new StringBuilder().AppendFormat("<{0}>", KeyValueXmlTag);
 
@@ -133,9 +133,9 @@ namespace GostCryptography.Cryptography
 		}
 
 		[SecurityCritical]
-		private static GostKeyExchangeParameters KeyParametersFromXml(string keyParametersXml)
+		private static Asn1.Common.GostKeyExchangeParameters KeyParametersFromXml(string keyParametersXml)
 		{
-			var parameters = new GostKeyExchangeParameters();
+			var parameters = new Asn1.Common.GostKeyExchangeParameters();
 
 			var keyValue = SecurityElement.FromString(keyParametersXml);
 

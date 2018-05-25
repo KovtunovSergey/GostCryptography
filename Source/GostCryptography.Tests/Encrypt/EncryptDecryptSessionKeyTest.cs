@@ -4,7 +4,6 @@ using System.Security.Cryptography;
 using System.Text;
 
 using GostCryptography.Cryptography;
-
 using NUnit.Framework;
 
 namespace GostCryptography.Tests.Encrypt
@@ -24,8 +23,8 @@ namespace GostCryptography.Tests.Encrypt
 		private AsymmetricAlgorithm _publicKey;
 		private AsymmetricAlgorithm _privateKey;
 
-		[SetUp]
-		public void SetUp()
+        [SetUp]
+        public void SetUp()
 		{
 			var certificate = TestCertificates.GetCertificate();
 

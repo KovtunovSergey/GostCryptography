@@ -23,12 +23,13 @@
 		/// </remarks>
 		public static readonly int[] IdGostR34102001Dh = { 1, 2, 643, 2, 2, 98 };
 
-		/// <summary>
-		/// Идентификатор OID алгоритм цифровой подписи ГОСТ Р 34.10-2001.
-		/// </summary>
-		/// <remarks>
-		/// 1.2.643.2.2.3
-		/// </remarks>
-		public static readonly int[] IdGostR341194WithGostR34102001 = { 1, 2, 643, 2, 2, 3 };
-	}
+        /// <summary>
+        /// Идентификатор OID алгоритм цифровой подписи ГОСТ Р 34.10-2001
+        /// </summary>
+        /// <remarks>
+        /// 1.2.643.2.2.3
+        /// </remarks>
+        public static readonly int[] IdGostR341194WithGostR34102001 = { 1, 2, 643, 2, 2, 3 };
+
+    }
 }

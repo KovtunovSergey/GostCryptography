@@ -34,7 +34,7 @@ namespace GostCryptography.Cryptography
 		/// и идентификатор OID параметров открытого ключа <see cref="GostKeyExchangeParameters.PublicKeyParamSet"/>. Остальные параметры не используются.
 		/// </remarks>
 		[SecuritySafeCritical]
-		public Gost3410EphemeralAsymmetricAlgorithm(GostKeyExchangeParameters keyParameters)
+		public Gost3410EphemeralAsymmetricAlgorithm(Asn1.Common.GostKeyExchangeParameters keyParameters)
 		{
 			if (keyParameters == null)
 			{
@@ -117,9 +117,9 @@ namespace GostCryptography.Cryptography
 		/// </summary>
 		/// <param name="keyParameters">Параметры открытого ключа, используемого для создания общего секретного ключа.</param>
 		[SecuritySafeCritical]
-		public override GostKeyExchangeAlgorithmBase CreateKeyExchange(GostKeyExchangeParameters keyParameters)
+		public override GostKeyExchangeAlgorithmBase CreateKeyExchange(Asn1.Common.GostKeyExchangeParameters keyParameters)
 		{
-			return new GostKeyExchangeAlgorithm(_provHandle, _keyHandle, new GostKeyExchangeParameters(keyParameters));
+			return new GostKeyExchangeAlgorithm(_provHandle, _keyHandle, new Asn1.Common.GostKeyExchangeParameters(keyParameters));
 		}
 
 
@@ -129,7 +129,7 @@ namespace GostCryptography.Cryptography
 		/// <param name="includePrivateKey">Включить секретный ключ.</param>
 		/// <exception cref="NotSupportedException"></exception>
 		[SecuritySafeCritical]
-		public override GostKeyExchangeParameters ExportParameters(bool includePrivateKey)
+		public override Asn1.Common.GostKeyExchangeParameters ExportParameters(bool includePrivateKey)
 		{
 			if (includePrivateKey)
 			{
@@ -144,7 +144,7 @@ namespace GostCryptography.Cryptography
 		/// </summary>
 		/// <param name="keyParameters">Параметры ключа, используемого для создания общего секретного ключа.</param>
 		/// <exception cref="NotSupportedException"></exception>
-		public override void ImportParameters(GostKeyExchangeParameters keyParameters)
+		public override void ImportParameters(Asn1.Common.GostKeyExchangeParameters keyParameters)
 		{
 			throw ExceptionUtility.NotSupported(Resources.EphemKeyOperationNotSupported);
 		}

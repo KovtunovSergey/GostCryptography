@@ -389,11 +389,11 @@ namespace GostCryptography.Cryptography
 		/// </summary>
 		/// <param name="keyParameters">Параметры открытого ключа, используемого для создания общего секретного ключа.</param>
 		[SecuritySafeCritical]
-		public override GostKeyExchangeAlgorithmBase CreateKeyExchange(GostKeyExchangeParameters keyParameters)
+		public override GostKeyExchangeAlgorithmBase CreateKeyExchange(Asn1.Common.GostKeyExchangeParameters keyParameters)
 		{
 			GetKeyPair();
 
-			return new GostKeyExchangeAlgorithm(_providerHandle, _keyHandle, new GostKeyExchangeParameters(keyParameters));
+			return new GostKeyExchangeAlgorithm(_providerHandle, _keyHandle, new Asn1.Common.GostKeyExchangeParameters(keyParameters));
 		}
 
 
@@ -403,7 +403,7 @@ namespace GostCryptography.Cryptography
 		/// <param name="includePrivateKey">Включить секретный ключ.</param>
 		/// <exception cref="NotSupportedException"></exception>
 		[SecuritySafeCritical]
-		public override GostKeyExchangeParameters ExportParameters(bool includePrivateKey)
+		public override Asn1.Common.GostKeyExchangeParameters ExportParameters(bool includePrivateKey)
 		{
 			if (includePrivateKey)
 			{
@@ -421,7 +421,7 @@ namespace GostCryptography.Cryptography
 		/// <param name="keyParameters">Параметры ключа, используемого для создания общего секретного ключа.</param>
 		/// <exception cref="NotSupportedException"></exception>
 		[SecuritySafeCritical]
-		public override void ImportParameters(GostKeyExchangeParameters keyParameters)
+		public override void ImportParameters(Asn1.Common.GostKeyExchangeParameters keyParameters)
 		{
 			if (keyParameters.PrivateKey != null)
 			{
@@ -431,7 +431,7 @@ namespace GostCryptography.Cryptography
 			_keyHandle.TryDispose();
 
 			_providerHandle = CryptoApiHelper.ProviderHandle;
-			_keyHandle = CryptoApiHelper.ImportPublicKey(_providerHandle, new GostKeyExchangeParameters(keyParameters));
+			_keyHandle = CryptoApiHelper.ImportPublicKey(_providerHandle, new Asn1.Common.GostKeyExchangeParameters(keyParameters));
 
 			_isPublicKeyOnly = true;
 		}

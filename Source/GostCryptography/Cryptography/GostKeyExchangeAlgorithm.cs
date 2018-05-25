@@ -14,7 +14,7 @@ namespace GostCryptography.Cryptography
 	sealed class GostKeyExchangeAlgorithm : GostKeyExchangeAlgorithmBase
 	{
 		[SecurityCritical]
-		public GostKeyExchangeAlgorithm(SafeProvHandleImpl provHandle, SafeKeyHandleImpl keyHandle, GostKeyExchangeParameters keyExchangeParameters)
+		public GostKeyExchangeAlgorithm(SafeProvHandleImpl provHandle, SafeKeyHandleImpl keyHandle, Asn1.Common.GostKeyExchangeParameters keyExchangeParameters)
 		{
 			if (provHandle == null)
 			{
@@ -43,7 +43,7 @@ namespace GostCryptography.Cryptography
 		[SecurityCritical]
 		private readonly SafeKeyHandleImpl _keyHandle;
 
-		private readonly GostKeyExchangeParameters _keyExchangeParameters;
+		private readonly Asn1.Common.GostKeyExchangeParameters _keyExchangeParameters;
 
 
 		/// <summary>

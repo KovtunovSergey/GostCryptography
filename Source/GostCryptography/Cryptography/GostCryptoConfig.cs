@@ -115,7 +115,7 @@ namespace GostCryptography.Cryptography
         /// </summary>
         static GostCryptoConfig()
         {
-            ProviderType = ProviderTypes.VipNet;
+            ProviderType = ProviderTypes.CryptoPro;
             InitializeDefaultNameToTypes();
             InitializeDefaultNameToOid();
         }
@@ -208,6 +208,7 @@ namespace GostCryptography.Cryptography
         public static void AddDefaultNamesToOid<T>(string oid, params string[] names)
         {
             var type = typeof(T);
+
 
             if (names != null)
             {

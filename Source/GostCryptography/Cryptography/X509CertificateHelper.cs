@@ -114,7 +114,7 @@ namespace GostCryptography.Cryptography
 				throw ExceptionUtility.ArgumentNull("certificate");
 			}
 
-			var cspObject = new GostKeyExchangeParameters();
+			var cspObject = new Asn1.Common.GostKeyExchangeParameters();
 			cspObject.DecodeParameters(certificate.PublicKey.EncodedParameters.RawData);
 			cspObject.DecodePublicKey(certificate.PublicKey.EncodedKeyValue.RawData);
 
