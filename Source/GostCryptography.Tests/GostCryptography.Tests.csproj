@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="Microsoft.Private.CoreFx.NETCoreApp" Version="4.6.0-preview1-26622-0" />
+    <PackageReference Include="Microsoft.Private.CoreFx.NETCoreApp" Version="4.6.0-preview1-26705-0" />
   </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RuntimeFrameworkVersion>2.2.0-preview1-26525-01</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>2.2.0-preview1-26529-01</RuntimeFrameworkVersion>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <PackageConflictPreferredPackages>Microsoft.Private.CoreFx.NETCoreApp;runtime.win-x64.Microsoft.Private.CoreFx.NETCoreApp;$(PackageConflictPreferredPackages)</PackageConflictPreferredPackages>
   </PropertyGroup>
@@ -16,7 +16,7 @@
   </PropertyGroup>
  
   <PropertyGroup>
-    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
