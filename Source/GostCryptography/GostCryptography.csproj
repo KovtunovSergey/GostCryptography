@@ -1,13 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.Platforms" Version="2.2.0-preview1-26529-01" />
     <PackageReference Include="Microsoft.Private.CoreFx.NETCoreApp" Version="4.6.0-preview1-26705-0" />
   </ItemGroup>
 
   <PropertyGroup>
+    <PackageConflictPreferredPackages>Microsoft.Private.CoreFx.NETCoreApp;runtime.linux-x64.Microsoft.Private.CoreFx.NETCoreApp;$(PackageConflictPreferredPackages)</PackageConflictPreferredPackages>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RuntimeFrameworkVersion>2.1.0-preview2-26406-04</RuntimeFrameworkVersion>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
     <PackageConflictPreferredPackages>Microsoft.Private.CoreFx.NETCoreApp;runtime.win-x64.Microsoft.Private.CoreFx.NETCoreApp;$(PackageConflictPreferredPackages)</PackageConflictPreferredPackages>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RuntimeFrameworkVersion>2.2.0-preview1-26529-01</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>2.2.0-preview1-007890</RuntimeFrameworkVersion>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
@@ -15,19 +22,22 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   
-  <PropertyGroup>
-    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0-preview3-26411-02" />
-    <PackageReference Include="System.Security.Permissions" Version="4.5.0-preview3-26411-02" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0-preview3-26411-02"/>
+    <PackageReference Include="System.Security.Permissions"  Version="4.5.0-preview3-26411-02"/>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
     <Reference Include="System.Security.Cryptography.Pkcs">
-      <HintPath>..\..\..\corefxGit\bin\Windows_NT.AnyCPU.Debug\System.Security.Cryptography.Pkcs\netcoreapp\System.Security.Cryptography.Pkcs.dll</HintPath>
+      <HintPath>../../../corefx/bin/runtime/netcoreapp-Linux-Debug-x64/System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="2.2.0-preview1-007890" />
+    <Reference Include="System.Security.Cryptography.Pkcs">
+      <HintPath>..\..\..\corefxGit\bin\Windows_NT.AnyCpu.Debug\System.Security.Cryptography.Pkcs\netcoreapp\System.Security.Cryptography.Pkcs.dll</HintPath>
     </Reference>
   </ItemGroup>
 
