@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/GostCryptography.Tests.dll",
+            "program": "${workspaceFolder}/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Source/GostCryptography.Tests",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
