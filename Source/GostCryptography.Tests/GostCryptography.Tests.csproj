@@ -1,22 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="Microsoft.Private.CoreFx.NETCoreApp" Version="4.6.0-preview1-27118-0" />
+    <PackageReference Include="Microsoft.Private.CoreFx.NETCoreApp" Version="4.6.0-preview1-26705-0" />
   </ItemGroup>
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RuntimeFrameworkVersion>3.0.0-preview1-27018-05</RuntimeFrameworkVersion>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+    <PackageConflictPreferredPackages>Microsoft.Private.CoreFx.NETCoreApp;runtime.linux-x64.Microsoft.Private.CoreFx.NETCoreApp;$(PackageConflictPreferredPackages)</PackageConflictPreferredPackages>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RuntimeFrameworkVersion>2.1.0-preview2-26406-04</RuntimeFrameworkVersion>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
     <PackageConflictPreferredPackages>Microsoft.Private.CoreFx.NETCoreApp;runtime.win-x64.Microsoft.Private.CoreFx.NETCoreApp;$(PackageConflictPreferredPackages)</PackageConflictPreferredPackages>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RuntimeFrameworkVersion>2.2.0-preview1-007890</RuntimeFrameworkVersion>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
- 
-  <PropertyGroup>
-    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,13 +29,18 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\GostCryptography\GostCryptography.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+  <ItemGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+    <ProjectReference Include="../GostCryptography/GostCryptography.csproj" />
     <Reference Include="System.Security.Cryptography.Pkcs">
-      <HintPath>..\..\..\corefxGit\bin\Windows_NT.AnyCPU.Debug\System.Security.Cryptography.Pkcs\netcoreapp\System.Security.Cryptography.Pkcs.dll</HintPath>
+      <HintPath>../../../corefx/bin/runtime/netcoreapp-Linux-Debug-x64/System.Security.Cryptography.Pkcs.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
+    <ProjectReference Include="..\GostCryptography\GostCryptography.csproj" />
+    <Reference Include="System.Security.Cryptography.Pkcs">
+      <HintPath>..\..\..\corefxGit\bin\Windows_NT.AnyCpu.Debug\System.Security.Cryptography.Pkcs\netcoreapp\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

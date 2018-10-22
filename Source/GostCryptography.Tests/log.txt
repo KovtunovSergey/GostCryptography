@@ -1,0 +1,143 @@
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.678, 902851843610, vstest.console.dll, Using .Net Framework version:.NETCoreApp,Version=v2.2
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.695, 902867694936, vstest.console.dll, Using platform:X64
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.703, 902876377532, vstest.console.dll, TestPluginCache: Discovering the extensions using extension path.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.705, 902877774099, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolving assembly.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.706, 902878932871, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolved assembly. 
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.710, 902882972376, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolving assembly.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.711, 902883517663, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolved assembly. 
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.711, 902883973053, vstest.console.dll, AssemblyResolver: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolving assembly.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.712, 902884485540, vstest.console.dll, AssemblyResolver: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolved assembly. 
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.713, 902885515616, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolving assembly.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.713, 902885966106, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolved assembly. 
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.714, 902887276775, vstest.console.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.715, 902887588367, vstest.console.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.715, 902887903560, vstest.console.dll, TestPluginCache: Executors are ''.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.715, 902888242852, vstest.console.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.716, 902888513246, vstest.console.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.728, 902901298544, vstest.console.dll, RunTestsArgumentProcessor:Execute: Test run is starting.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.729, 902901722034, vstest.console.dll, RunTestsArgumentProcessor:Execute: Queuing Test run.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.729, 902902337920, vstest.console.dll, TestRequestManager.RunTests: run tests started.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.752, 902924950587, vstest.console.dll, AssemblyMetadataProvider.GetFrameWork: Determined framework:'.NETCoreApp,Version=v2.2' for source: '/home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.dll'
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.753, 902925529673, vstest.console.dll, Determined framework for all sources: .NETCoreApp,Version=v2.2
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.758, 902931056843, vstest.console.dll, AssemblyMetadataProvider.GetArchitecture: Determined architecture:X64 info for assembly: /home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.dll
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.765, 902938286872, vstest.console.dll, Determined platform for all sources: X64
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.774, 902946678675, vstest.console.dll, Compatible sources list : 
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.774, 902947158063, vstest.console.dll, /home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.dll
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.778, 902950788878, vstest.console.dll, InferRunSettingsHelper.IsTestSettingsEnabled: Unable to navigate to RunSettings/MSTest. Current node: RunSettings
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.782, 902955180474, vstest.console.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Hosting.DefaultTestHostManager
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.784, 902957343823, vstest.console.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Hosting.DotnetTestHostManager
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.785, 902958317000, vstest.console.dll, TestEngine: Initializing Parallel Execution as MaxCpuCount is set to: 1
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.787, 902959579871, vstest.console.dll, InferRunSettingsHelper.IsTestSettingsEnabled: Unable to navigate to RunSettings/MSTest. Current node: RunSettings
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.797, 902970019324, vstest.console.dll, TestRequestSender is acting as server
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.803, 902976230478, vstest.console.dll, TestRunRequest.ExecuteAsync: Creating test run request.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.804, 902977100958, vstest.console.dll, TestRunRequest.ExecuteAsync: Starting.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.805, 902977536947, vstest.console.dll, TestRunRequest.ExecuteAsync: Starting run with settings:TestRunCriteria:
+   KeepAlive=False,FrequencyOfRunStatsChangeEvent=10,RunStatsChangeEventTimeout=00:00:01.5000000,TestCaseFilter=,TestExecutorLauncher=
+   Settingsxml=<RunSettings>
+  <RunConfiguration>
+    <ResultsDirectory>/home/netcore/GostCryptography/Source/GostCryptography.Tests/TestResults</ResultsDirectory>
+    <TargetPlatform>X64</TargetPlatform>
+    <TargetFrameworkVersion>.NETCoreApp,Version=v2.2</TargetFrameworkVersion>
+    <DesignMode>False</DesignMode>
+    <CollectSourceInformation>False</CollectSourceInformation>
+  </RunConfiguration>
+</RunSettings>
+
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.807, 902979545400, vstest.console.dll, TestRunRequest.ExecuteAsync: Wait for the first run request is over.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.809, 902981800747, vstest.console.dll, ParallelProxyExecutionManager: Start execution. Total sources: 1
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.814, 902987246218, vstest.console.dll, ProxyParallelExecutionManager: Triggering test run for next source: /home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.dll
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.815, 902987725407, vstest.console.dll, ParallelProxyExecutionManager: Execution started. Started clients: 1
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.815, 902988167897, vstest.console.dll, ProxyExecutionManager: Test host is always Lazy initialize.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.819, 902992043105, vstest.console.dll, ProxyParallelExecutionManager: No sources available for execution.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:06:16.819, 902992366798, vstest.console.dll, TestRunRequest.ExecuteAsync: Started.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:06:16.820, 902992676790, vstest.console.dll, TestRunRequest.WaitForCompletion: Waiting with timeout -1.
+TpTrace Information: 0 : 3725, 4, 2018/06/19, 15:06:16.820, 902993317675, vstest.console.dll, SocketServer: Listening on end point : 127.0.0.1:46651
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.831, 903003619333, vstest.console.dll, DotnetTestHostmanager: Full path of dotnet.exe is /home/netcore/.dotnet/dotnet
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.831, 903004104621, vstest.console.dll, DotnetTestHostmanager: Adding  --runtimeconfig "/home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.runtimeconfig.json" in args
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.831, 903004406614, vstest.console.dll, DotnetTestHostmanager: Adding  --depsfile "/home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.deps.json" in args
+TpTrace Information: 0 : 3725, 4, 2018/06/19, 15:06:16.832, 903004735806, vstest.console.dll, AssemblyResolver: Microsoft.Extensions.DependencyModel: Resolving assembly.
+TpTrace Information: 0 : 3725, 4, 2018/06/19, 15:06:16.832, 903005219495, vstest.console.dll, AssemblyResolver: Microsoft.Extensions.DependencyModel: Resolved assembly. 
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.833, 903005590486, vstest.console.dll, DotnetTestHostmanager: Reading file /home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.deps.json to get path of testhost.dll
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.848, 903020606232, vstest.console.dll, DotnetTestHostmanager: Relative path of testhost.dll with respect to package folder is microsoft.testplatform.testhost/15.7.0/lib/netstandard1.5/testhost.dll
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.850, 903022977476, vstest.console.dll, DotnetTestHostmanager: Looking for path microsoft.testplatform.testhost/15.7.0/lib/netstandard1.5/testhost.dll in folder /home/netcore/.dotnet/store/|arch|/|tfm|
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.850, 903023285869, vstest.console.dll, DotnetTestHostmanager: Looking for path microsoft.testplatform.testhost/15.7.0/lib/netstandard1.5/testhost.dll in folder /home/netcore/.nuget/packages
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:06:16.851, 903023580562, vstest.console.dll, DotnetTestHostmanager: Full path of testhost.dll is /home/netcore/.nuget/packages/microsoft.testplatform.testhost/15.7.0/lib/netstandard1.5/testhost.dll
+TpTrace Verbose: 0 : 3725, 6, 2018/06/19, 15:06:17.812, 903985371068, vstest.console.dll, DotnetTestHostManager: Starting process '/home/netcore/.dotnet/dotnet' with command line 'exec --runtimeconfig "/home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.runtimeconfig.json" --depsfile "/home/netcore/GostCryptography/Source/GostCryptography.Tests/bin/Debug/netcoreapp2.2/linux-x64/GostCryptography.Tests.deps.json" "/home/netcore/.nuget/packages/microsoft.testplatform.testhost/15.7.0/lib/netstandard1.5/testhost.dll" --port 46651 --endpoint 127.0.0.1:046651 --role client --parentprocessid 3725 --diag "/home/netcore/GostCryptography/Source/GostCryptography.Tests/log.host.18-06-19_15-06-16_82728_4.txt" --telemetryoptedin false'
+TpTrace Verbose: 0 : 3725, 6, 2018/06/19, 15:06:17.823, 903996364744, vstest.console.dll, Test Runtime launched
+TpTrace Verbose: 0 : 3725, 8, 2018/06/19, 15:06:18.824, 904997220402, vstest.console.dll, Client connected, and starting MessageLoopAsync
+TpTrace Error: 0 : 3725, 4, 2018/06/19, 15:07:18.928, 965100548636, vstest.console.dll, ProxyExecutionManager.StartTestRun: Failed to start test run: Microsoft.VisualStudio.TestPlatform.ObjectModel.TestPlatformException: Failed to negotiate protocol. Wait for response timed out.
+   at Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.TestRequestSender.CheckVersionWithTestHost()
+   at Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Client.ProxyOperationManager.SetupChannel(IEnumerable`1 sources, CancellationToken cancellationToken)
+   at Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Client.ProxyExecutionManager.StartTestRun(TestRunCriteria testRunCriteria, ITestRunEventsHandler eventHandler)
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:07:18.933, 965106442344, vstest.console.dll, TestRunRequest:SendTestRunMessage: Starting.
+TpTrace Information: 0 : 3725, 4, 2018/06/19, 15:07:18.935, 965108379944, vstest.console.dll, TestRunRequest:SendTestRunMessage: Completed.
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:07:18.936, 965108817389, vstest.console.dll, ParallelProxyExecutionManager: HandlePartialRunComplete: Total completed clients = 1, Run complete = True, Run canceled: False.
+TpTrace Verbose: 0 : 3725, 4, 2018/06/19, 15:07:19.508, 965681294313, vstest.console.dll, TestRunRequest:TestRunComplete: Starting. IsAborted:True IsCanceled:False.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:07:19.509, 965682450034, vstest.console.dll, TestRunRequest.Dispose: Starting.
+TpTrace Information: 0 : 3725, 4, 2018/06/19, 15:07:19.510, 965682769467, vstest.console.dll, TestRunRequest:TestRunComplete: Completed.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:07:19.510, 965683054697, vstest.console.dll, TestRunRequest.Dispose: Completed.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:07:19.510, 965683358228, vstest.console.dll, TestRequestManager.RunTests: run tests completed, sucessful: True.
+TpTrace Information: 0 : 3725, 1, 2018/06/19, 15:07:19.511, 965683668761, vstest.console.dll, RunTestsArgumentProcessor:Execute: Test run is completed.
+TpTrace Verbose: 0 : 3725, 1, 2018/06/19, 15:07:19.511, 965683950290, vstest.console.dll, Executor.Execute: Exiting with exit code of 1
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.794, 9074972595188, vstest.console.dll, TestPluginCache: Discovering the extensions using extension path.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.804, 9074976603057, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolving assembly.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.804, 9074977193352, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolved assembly. 
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.807, 9074980331028, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolving assembly.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.808, 9074980685826, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolved assembly. 
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.808, 9074981410820, vstest.console.dll, AssemblyResolver: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolving assembly.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.809, 9074981637118, vstest.console.dll, AssemblyResolver: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolved assembly. 
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.809, 9074982342013, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolving assembly.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.810, 9074982530812, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolved assembly. 
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.811, 9074983484004, vstest.console.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.811, 9074983554004, vstest.console.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.811, 9074983598203, vstest.console.dll, TestPluginCache: Executors are ''.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.811, 9074983641503, vstest.console.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.811, 9074983707603, vstest.console.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.823, 9074996450705, vstest.console.dll, RunTestsArgumentProcessor:Execute: Test run is starting.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.824, 9074996979501, vstest.console.dll, RunTestsArgumentProcessor:Execute: Queuing Test run.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.824, 9074997374098, vstest.console.dll, TestRequestManager.RunTests: run tests started.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.840, 9075012979779, vstest.console.dll, AssemblyMetadataProvider.GetFrameWork: Determined framework:'.NETCoreApp,Version=v2.2' for source: '/home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.dll'
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.847, 9075019823227, vstest.console.dll, Determined framework for all sources: .NETCoreApp,Version=v2.2
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.849, 9075021523714, vstest.console.dll, AssemblyMetadataProvider.GetArchitecture: Determined architecture:X64 info for assembly: /home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.dll
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.852, 9075025281685, vstest.console.dll, Determined platform for all sources: X64
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.855, 9075027558768, vstest.console.dll, Compatible sources list : 
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.860, 9075032754228, vstest.console.dll, /home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.dll
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.863, 9075036310301, vstest.console.dll, InferRunSettingsHelper.IsTestSettingsEnabled: Unable to navigate to RunSettings/MSTest. Current node: RunSettings
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.867, 9075039884673, vstest.console.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Hosting.DefaultTestHostManager
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.871, 9075044378339, vstest.console.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Hosting.DotnetTestHostManager
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.872, 9075044913035, vstest.console.dll, TestEngine: Initializing Parallel Execution as MaxCpuCount is set to: 1
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.872, 9075045306032, vstest.console.dll, InferRunSettingsHelper.IsTestSettingsEnabled: Unable to navigate to RunSettings/MSTest. Current node: RunSettings
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.884, 9075057356840, vstest.console.dll, TestRequestSender is acting as server
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.891, 9075064112088, vstest.console.dll, TestRunRequest.ExecuteAsync: Creating test run request.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.892, 9075065037481, vstest.console.dll, TestRunRequest.ExecuteAsync: Starting.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.892, 9075065440578, vstest.console.dll, TestRunRequest.ExecuteAsync: Starting run with settings:TestRunCriteria:
+   KeepAlive=False,FrequencyOfRunStatsChangeEvent=10,RunStatsChangeEventTimeout=00:00:01.5000000,TestCaseFilter=,TestExecutorLauncher=
+   Settingsxml=<RunSettings>
+  <RunConfiguration>
+    <ResultsDirectory>/home/netcore/GostCryptography/Source/GostCryptography.Tests/TestResults</ResultsDirectory>
+    <TargetPlatform>X64</TargetPlatform>
+    <TargetFrameworkVersion>.NETCoreApp,Version=v2.2</TargetFrameworkVersion>
+    <DesignMode>False</DesignMode>
+    <CollectSourceInformation>False</CollectSourceInformation>
+  </RunConfiguration>
+</RunSettings>
+
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.893, 9075065859375, vstest.console.dll, TestRunRequest.ExecuteAsync: Wait for the first run request is over.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.893, 9075066445070, vstest.console.dll, ParallelProxyExecutionManager: Start execution. Total sources: 1
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.895, 9075067502762, vstest.console.dll, ProxyParallelExecutionManager: Triggering test run for next source: /home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.dll
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.895, 9075067634161, vstest.console.dll, ProxyParallelExecutionManager: No sources available for execution.
+TpTrace Information: 0 : 4832, 1, 2018/06/19, 17:22:28.895, 9075067698661, vstest.console.dll, TestRunRequest.ExecuteAsync: Started.
+TpTrace Verbose: 0 : 4832, 1, 2018/06/19, 17:22:28.895, 9075067774860, vstest.console.dll, TestRunRequest.WaitForCompletion: Waiting with timeout -1.
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.895, 9075068378856, vstest.console.dll, ParallelProxyExecutionManager: Execution started. Started clients: 1
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.896, 9075069334848, vstest.console.dll, ProxyExecutionManager: Test host is always Lazy initialize.
+TpTrace Information: 0 : 4832, 4, 2018/06/19, 17:22:28.905, 9075078402679, vstest.console.dll, SocketServer: Listening on end point : 127.0.0.1:33373
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.917, 9075089960391, vstest.console.dll, DotnetTestHostmanager: Full path of dotnet.exe is /home/netcore/.dotnet/dotnet
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.917, 9075090400887, vstest.console.dll, DotnetTestHostmanager: Adding  --runtimeconfig "/home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.runtimeconfig.json" in args
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.918, 9075090704285, vstest.console.dll, DotnetTestHostmanager: Adding  --depsfile "/home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.deps.json" in args
+TpTrace Information: 0 : 4832, 4, 2018/06/19, 17:22:28.918, 9075091028783, vstest.console.dll, AssemblyResolver: Microsoft.Extensions.DependencyModel: Resolving assembly.
+TpTrace Information: 0 : 4832, 4, 2018/06/19, 17:22:28.919, 9075091504479, vstest.console.dll, AssemblyResolver: Microsoft.Extensions.DependencyModel: Resolved assembly. 
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.919, 9075091652678, vstest.console.dll, DotnetTestHostManager: Assume published test project, with test host path = /home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/testhost.dll.
+TpTrace Verbose: 0 : 4832, 4, 2018/06/19, 17:22:28.919, 9075091736877, vstest.console.dll, DotnetTestHostmanager: Full path of testhost.dll is /home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/testhost.dll
+TpTrace Verbose: 0 : 4832, 6, 2018/06/19, 17:22:29.896, 9076068825024, vstest.console.dll, DotnetTestHostManager: Starting process '/home/netcore/.dotnet/dotnet' with command line 'exec --runtimeconfig "/home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.runtimeconfig.json" --depsfile "/home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/GostCryptography.Tests.deps.json" "/home/netcore/GostCryptography/Source/GostCryptography.Tests/tests/testhost.dll" --port 33373 --endpoint 127.0.0.1:033373 --role client --parentprocessid 4832 --diag "/home/netcore/GostCryptography/Source/GostCryptography.Tests/log.host.18-06-19_17-22-28_91400_4.txt" --telemetryoptedin false'
+TpTrace Verbose: 0 : 4832, 6, 2018/06/19, 17:22:29.907, 9076080350436, vstest.console.dll, Test Runtime launched
+TpTrace Verbose: 0 : 4832, 8, 2018/06/19, 17:22:30.902, 9077075174461, vstest.console.dll, Client connected, and starting MessageLoopAsync

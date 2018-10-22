@@ -1,0 +1,358 @@
+TpTrace Verbose: 0 : 4848, 1, 2018/06/19, 17:22:30.051, 9076230605190, testhost.dll, TestRequestHanlder is acting as client
+TpTrace Information: 0 : 4848, 1, 2018/06/19, 17:22:30.073, 9076246462370, testhost.dll, DefaultEngineInvoker: Monitoring parent process with id: '4832'
+TpTrace Information: 0 : 4848, 1, 2018/06/19, 17:22:30.088, 9076260708861, testhost.dll, DefaultEngineInvoker: Initialize communication on endpoint address: '127.0.0.1:033373'
+TpTrace Information: 0 : 4848, 1, 2018/06/19, 17:22:30.141, 9076313756857, testhost.dll, SocketClient.Start: connecting to server endpoint: 127.0.0.1:033373
+TpTrace Information: 0 : 4848, 1, 2018/06/19, 17:22:30.178, 9076350742076, testhost.dll, DefaultEngineInvoker: Start Request Processing.
+TpTrace Information: 0 : 4848, 4, 2018/06/19, 17:22:30.188, 9076360826599, testhost.dll, SocketClient.OnServerConnected: connected to server endpoint: 127.0.0.1:033373
+TpTrace Verbose: 0 : 4848, 4, 2018/06/19, 17:22:30.196, 9076368509541, testhost.dll, Connected to server, and starting MessageLoopAsync
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:30.199, 9076372193913, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:30.948, 9077120903213, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Error: 0 : 4848, 8, 2018/06/19, 17:22:31.034, 9077207105258, testhost.dll, LengthPrefixCommunicationChannel: MessageReceived: Exception occurred while calling handler of type Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.TestRequestHandler for MessageReceivedEventArgs: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.TypeLoadException: Access is denied: 'System.Collections.Hashtable'.
+   at System.ComponentModel.TypeDescriptor.NodeFor(Type type, Boolean createDelegator)
+   at System.ComponentModel.TypeDescriptor.NodeFor(Type type)
+   at System.ComponentModel.TypeDescriptor.GetDescriptor(Type type, String typeName)
+   at System.ComponentModel.TypeDescriptor.GetConverter(Type type)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.CanTypeDescriptorConvertString(Type type, TypeConverter& typeConverter)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CanConvertToString(Type type)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CreateContract(Type objectType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.TestRequestHandler.OnMessageReceived(Object sender, MessageReceivedEventArgs messageReceivedArgs)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at Microsoft.VisualStudio.TestPlatform.Utilities.MulticastDelegateUtilities.SafeInvoke(Delegate delegates, Object sender, EventArgs args, String traceDisplayName)
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:31.035, 9077207871452, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:31.035, 9077208280849, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Error: 0 : 4848, 8, 2018/06/19, 17:22:31.036, 9077209390040, testhost.dll, LengthPrefixCommunicationChannel: MessageReceived: Exception occurred while calling handler of type Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.TestRequestHandler for MessageReceivedEventArgs: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.TypeLoadException: Access is denied: 'System.Collections.Hashtable'.
+   at System.ComponentModel.TypeDescriptor.NodeFor(Type type, Boolean createDelegator)
+   at System.ComponentModel.TypeDescriptor.NodeFor(Type type)
+   at System.ComponentModel.TypeDescriptor.GetDescriptor(Type type, String typeName)
+   at System.ComponentModel.TypeDescriptor.GetConverter(Type type)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.CanTypeDescriptorConvertString(Type type, TypeConverter& typeConverter)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CanConvertToString(Type type)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CreateContract(Type objectType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.TestRequestHandler.OnMessageReceived(Object sender, MessageReceivedEventArgs messageReceivedArgs)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at Microsoft.VisualStudio.TestPlatform.Utilities.MulticastDelegateUtilities.SafeInvoke(Delegate delegates, Object sender, EventArgs args, String traceDisplayName)
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:31.037, 9077209997136, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:32.038, 9078211157230, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:33.039, 9079212363439, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:34.041, 9080213586662, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:35.042, 9081215018899, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:36.043, 9082215833554, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:37.044, 9083217045622, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:38.045, 9084217906506, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:39.046, 9085219063303, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:40.047, 9086220230115, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:41.048, 9087221435040, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:42.050, 9088222848278, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:43.051, 9089223722535, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:44.051, 9090224029311, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:45.051, 9091224274102, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:46.052, 9092225460900, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:47.054, 9093226613412, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:48.055, 9094227580440, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:49.055, 9095228033887, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:50.056, 9096229141842, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:51.057, 9097230309111, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:52.058, 9098231019098, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:53.059, 9099232164696, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:54.060, 9100232908011, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:55.061, 9101234166737, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:56.062, 9102235391176, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:57.063, 9103236033234, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:58.064, 9104236703306, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:22:59.065, 9105237851588, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:00.066, 9106239010084, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:01.067, 9107240222594, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:02.069, 9108241504817, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:03.070, 9109242754254, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:04.071, 9110244063804, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:05.077, 9111250381733, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:06.078, 9112251207715, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:07.079, 9113252371908, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:08.081, 9114253622815, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:09.082, 9115255086733, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:10.083, 9116256357567, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:11.085, 9117257532315, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:12.086, 9118258824176, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:13.087, 9119260264350, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:14.089, 9120261571038, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:15.090, 9121262803740, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:16.090, 9122263022363, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:17.091, 9123264032193, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:18.092, 9124265296635, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:19.093, 9125265978896, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:20.094, 9126267127766, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:21.095, 9127268402948, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:22.097, 9128270059042, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:23.098, 9129271310751, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:24.099, 9130272119277, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:25.101, 9131273692711, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:26.102, 9132274944360, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:27.103, 9133276186523, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:28.104, 9134277403299, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:29.106, 9135278580189, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:30.107, 9136279784792, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:31.108, 9137281021307, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:32.108, 9138281298843, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:33.109, 9139281734990, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:34.110, 9140282888745, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:35.111, 9141284154113, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:36.113, 9142285578693, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:37.114, 9143286832886, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:38.115, 9144288068793, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:39.116, 9145289324713, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:40.118, 9146290746144, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:41.119, 9147291996190, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:42.120, 9148293445647, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:43.122, 9149294604119, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:44.123, 9150295770904, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:45.123, 9151296060107, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:46.124, 9152296500922, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:47.124, 9153297217748, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:48.125, 9154298347484, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:49.126, 9155299218634, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:50.127, 9156300074598, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:51.128, 9157301259671, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:52.129, 9158302427757, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:53.130, 9159303041960, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:54.131, 9160304054672, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:55.132, 9161305203996, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:56.133, 9162306359433, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:57.135, 9163307500782, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:58.135, 9164308034148, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:23:59.136, 9165309320621, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:00.138, 9166310742106, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:01.139, 9167311983105, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:02.140, 9168313256315, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:03.142, 9169314794337, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:04.143, 9170315964173, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:05.144, 9171317250120, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:06.146, 9172318533580, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:07.147, 9173319717953, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:08.148, 9174320933138, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:09.149, 9175322196434, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:10.150, 9176323405644, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:11.152, 9177324657365, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:12.153, 9178325875498, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:13.154, 9179327097044, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:14.155, 9180328338202, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:15.157, 9181329639571, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:16.158, 9182330863952, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:17.159, 9183332103946, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:18.160, 9184333355551, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:19.162, 9185334512969, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:20.162, 9186334773605, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:21.163, 9187335957246, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:22.164, 9188337113700, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:23.165, 9189338280966, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:24.167, 9190339554143, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:25.167, 9191340042736, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:26.168, 9192341307437, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:27.169, 9193342325851, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:28.171, 9194343501275, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:29.172, 9195344712812, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:30.173, 9196345922159, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:31.174, 9197347168019, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:32.175, 9198348435390, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:33.177, 9199349731472, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:34.178, 9200350972066, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:35.179, 9201352259972, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:36.181, 9202353737688, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:37.182, 9203355054117, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:38.184, 9204356512956, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:39.185, 9205357822908, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:40.186, 9206359398970, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:41.188, 9207360748045, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:42.188, 9208361268636, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:43.190, 9209362584633, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:44.191, 9210364149541, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:45.192, 9211365422261, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:46.194, 9212366681993, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:47.195, 9213367902437, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:48.196, 9214369188391, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:49.198, 9215370626456, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:50.199, 9216371826734, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:51.199, 9217372071229, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:52.200, 9218373314129, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:53.201, 9219374094942, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:54.202, 9220375286465, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:55.203, 9221376115601, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:56.204, 9222377390445, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:57.206, 9223378933499, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:58.207, 9224380196365, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:24:59.209, 9225381658942, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:00.210, 9226382968331, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:01.211, 9227384419229, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:02.213, 9228385609040, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:03.214, 9229386854762, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:04.215, 9230388133095, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:05.217, 9231389573938, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:06.218, 9232390834592, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:07.219, 9233391966759, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:08.221, 9234393577033, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:09.222, 9235394827920, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:10.223, 9236396121318, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:11.225, 9237397631626, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:12.226, 9238398876346, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:13.227, 9239400050177, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:14.228, 9240401368118, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:15.230, 9241402542471, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:16.231, 9242403857134, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:17.232, 9243405376506, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:18.234, 9244406629190, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:19.235, 9245407812185, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:20.236, 9246409121890, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:21.237, 9247410370407, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:22.239, 9248411612534, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:23.240, 9249412806871, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:24.241, 9250414008219, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:25.242, 9251415178378, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:26.244, 9252416666346, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:27.246, 9253418629321, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:28.247, 9254420049910, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:29.248, 9255421296110, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:30.250, 9256422547721, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:31.251, 9257424030041, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:32.252, 9258425307772, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:33.253, 9259425938417, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:34.254, 9260427099970, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:35.255, 9261428335533, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:36.257, 9262429637805, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:37.258, 9263430891888, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:38.259, 9264432114681, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:39.260, 9265433432884, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:40.262, 9266434759498, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:41.263, 9267436167721, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:42.264, 9268437348855, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:43.266, 9269438611699, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:44.267, 9270439870954, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:45.268, 9271441051719, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:46.269, 9272442324594, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:47.271, 9273443888777, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:48.271, 9274444102177, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:49.272, 9275445436081, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:50.274, 9276446728596, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:51.275, 9277448275219, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:52.277, 9278449506154, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:53.278, 9279450692799, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:54.279, 9280451888154, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:55.280, 9281453137918, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:56.281, 9282454280994, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:57.282, 9283455441779, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:58.287, 9284460112256, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:25:59.288, 9285461373060, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:00.290, 9286462645674, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:01.291, 9287463928397, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:02.292, 9288465188931, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:03.293, 9289466430074, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:04.295, 9290467631828, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:05.296, 9291468910390, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:06.297, 9292470411061, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:07.299, 9293471666043, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:08.300, 9294472902535, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:09.301, 9295474086837, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:10.302, 9296475103849, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:11.303, 9297475989872, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:12.304, 9298477129203, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:13.305, 9299477908246, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:14.307, 9300479543893, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:15.308, 9301480809952, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:16.309, 9302481711223, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:17.310, 9303483195400, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:18.311, 9304484299488, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:19.312, 9305485092588, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:20.313, 9306485837196, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:21.314, 9307486574915, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:22.314, 9308487243543, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:23.315, 9309488067180, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:24.316, 9310488867626, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:25.317, 9311490223479, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:26.318, 9312491277043, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:27.319, 9313492046517, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:28.320, 9314492918400, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:29.321, 9315493701093, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:30.322, 9316494517195, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:31.322, 9317495389205, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:32.323, 9318496158026, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:33.325, 9319497641253, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:34.326, 9320498762990, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:35.327, 9321499710637, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:36.328, 9322500679694, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:37.329, 9323502272956, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:38.331, 9324503528429, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:39.332, 9325504629012, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:40.332, 9326505453706, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:41.333, 9327506340809, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:42.335, 9328507767818, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:43.336, 9329509137236, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:44.337, 9330510061065, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:45.338, 9331510902304, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:46.339, 9332512077450, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:47.340, 9333513385404, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:48.342, 9334514532068, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:49.343, 9335515812340, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:50.343, 9336516070326, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:51.344, 9337517279417, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:52.345, 9338517797520, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:53.348, 9339520861020, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:54.349, 9340521939237, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:55.350, 9341522869164, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:56.351, 9342523802200, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:57.352, 9343524645646, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:58.353, 9344525882098, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:26:59.353, 9345526269662, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:00.355, 9346527472432, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:01.355, 9347528462612, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:02.357, 9348529647099, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:03.358, 9349530929495, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:04.359, 9350532230399, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:05.360, 9351533382712, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:06.362, 9352534579834, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:07.362, 9353534934968, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:08.363, 9354536094507, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:09.364, 9355537254455, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:10.365, 9356537837814, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:11.366, 9357539063379, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:12.367, 9358540305952, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:13.369, 9359541560633, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:14.370, 9360543229622, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:15.371, 9361544420921, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:16.372, 9362545292130, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:17.374, 9363546538445, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:18.375, 9364547851369, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:19.376, 9365549073101, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:20.377, 9366550263742, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:21.379, 9367551481691, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:22.380, 9368552758848, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:23.381, 9369554276113, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:24.382, 9370555441187, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:25.384, 9371556652569, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:26.385, 9372557967160, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:27.386, 9373559431858, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:28.387, 9374560038968, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:29.388, 9375561195384, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:30.389, 9376562342209, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:31.391, 9377563498641, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:32.391, 9378564200384, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:33.392, 9379565453032, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:34.394, 9380566621390, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:35.395, 9381567851855, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:36.396, 9382569027628, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:37.397, 9383570185509, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:38.398, 9384571457499, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
+TpTrace Verbose: 0 : 4848, 8, 2018/06/19, 17:27:39.400, 9385572687396, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:33373 localEndPoint: 127.0.0.1:38299
